@@ -30,8 +30,7 @@ git clone --depth 1 --branch v7.2.0 https://github.com/snakemake/snakemake-wrapp
 Download raw sequencing data from the EHI repository. This takes a while.
 
 ```sh
-cd resources/reads
-wget -i reads.csv
+wget -P resources/reads -i reads.csv
 ```
 
 ## 4. Download reference genome
@@ -39,7 +38,7 @@ wget -i reads.csv
 Download the red squirrel reference genome from the NCBI.
 
 ```sh
-Add code
+wget -P resources/reference https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/902/686/455/GCA_902686455.2_mSciVul1.2/GCA_902686455.2_mSciVul1.2_genomic.fna.gz
 ```
 
 ## 5. Launch pipeline
@@ -47,5 +46,5 @@ Add code
 Launch Snakemake pipeline and wait until the final variant calling file is generated.
 
 ```sh
-Add code
+snakemake --workflow-profile profile/slurm
 ```
