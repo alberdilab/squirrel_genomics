@@ -30,6 +30,7 @@ git clone --depth 1 --branch v7.2.0 https://github.com/snakemake/snakemake-wrapp
 Download raw sequencing data from the EHI repository. This takes a while.
 
 ```sh
+wget https://raw.githubusercontent.com/alberdilab/squirrel_genomics/refs/heads/main/reads.csv
 wget -P resources/reads -i reads.csv
 ```
 
